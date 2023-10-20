@@ -15,12 +15,13 @@ Inputs:
 
 Outputs:
     - sim: Cell maps at times of tspan
+    - TC: full cell time course that can be saved if looking at volume or cell count progression
 %}
 
-function Sim = RDFDM_3D(initial, D, kp, dx, dy, dz, dt, tspan, bcs, theta)
+function [Sim, TC] = RDFDM_3D(initial, D, kp, dx, dy, dz, dt, tspan, bcs, theta)
     [sy,sx,sz] = size(initial);
     t_idx = 1 + tspan/dt;
-    nt = t_idx(end);
+    nt = t_idx(end)-1;
     
     %Check if kp is scalar
     if(numel(kp)==1)
@@ -96,4 +97,5 @@ function Sim = RDFDM_3D(initial, D, kp, dx, dy, dz, dt, tspan, bcs, theta)
     end
     
     Sim = N(:,:,:,t_idx);
+    TC = N;
 end

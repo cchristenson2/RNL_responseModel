@@ -9,6 +9,8 @@ or to include treatment.
     Calibration and forward model would need to be adjusted depending on 
     format of the radiation time course
 %}
+clear
+clc
 
 %setup for problem
 loc = 'example_patient\'; %in silico tumor with noise added
@@ -73,7 +75,13 @@ subplot(2,3,6)
 temp_meas = squeeze(Outputs_cal.meas.N(:,:,slice,3));
 scatter(temp_meas(idx), temp_sim(idx), 50, 'filled');
 refline(1,0);
-xlabel('Measured Cells'); ylabel('Calibrated Cells'); axis square
+xlabel('Measured Cells'); 
+if(cal_flag==1)
+    ylabel('Calibrated Cells'); 
+else
+    ylabel('Predicted Cells'); 
+end
+axis square
 
 
 disp(['Diffusivity % error = ',num2str(100*(Params_cal.d-Params_true.d)/Params_true.d),'%']);

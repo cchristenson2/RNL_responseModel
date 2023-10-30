@@ -1,8 +1,12 @@
 # RNL_responseModel
-### Companion code for publication submitted to Brain Multiphysics
-Title: Predicting the spatio-temporal response of recurrent glioblastoma treated with rhenium-186 labelled nanoliposomes
-
-Authors: Chase Christenson, Chengyue Wu, David A. Hormuth II, Shiliang Huang, Ande Bao, Andrew Brenner, Thomas E. Yankeelov
+### Companion code for publication in Brain Multiphysics
+Citation: Chase Christenson, Chengyue Wu, David A. Hormuth, Shiliang Huang, Ande Bao, Andrew Brenner, Thomas E. Yankeelov,
+Predicting the spatio-temporal response of recurrent glioblastoma treated with rhenium-186 labelled nanoliposomes,
+Brain Multiphysics,
+2023,
+100084,
+ISSN 2666-5220,
+https://doi.org/10.1016/j.brain.2023.100084.
 
 Code authors: Chase Christenson, Chengyuye Wu, David A. Hormuth II
 
